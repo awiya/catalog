@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Product List</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of products">
+                        <td>{{prod.id}}</td>
+                        <td>{{prod.name}}</td>
+                        <td>{{prod.price}}</td>
+                        <td>
+                            <button (click)="handleDeleteProduct(prod)" class="btn btn-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
